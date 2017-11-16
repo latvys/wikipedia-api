@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
   $('#submit').on('click', (e) => {
-    event.preventDefault()
+    e.preventDefault()
 
     let $search = $('#search');
 
