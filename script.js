@@ -12,7 +12,7 @@ $(document).ready(() => {
 
   function getData(searchVal) {
     $.ajax({
-      url: 'http://en.wikipedia.org/w/api.php',
+      url: 'https://en.wikipedia.org/w/api.php',
       data: {
         action: 'query',
         format: 'json',
@@ -32,7 +32,6 @@ $(document).ready(() => {
   function loopThroughResults(data) {
     let results = data.query.pages;
     Object.keys(results).forEach((result) => {
-      console.log(results[result]);
       renderResults(
         results[result].pageid,
         results[result].title,
