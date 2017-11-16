@@ -1,5 +1,4 @@
 * {
-  all: none;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #525252;
@@ -12,7 +11,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 100%;
   padding: 50px;
   margin: auto;
 }
@@ -105,10 +104,23 @@ input::-webkit-input-placeholder {
   font-size: 22px;
   color: #3d6afc;
   margin-bottom: 12px;
+  transition: all linear 0.15s;
 }
 
 .searchResult p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: all linear 0.15s;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 50px 0;
+  }
+
+  .searchResult {
+    margin: 0;
+    text-align: center;
+  }
 }
